@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  chat-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chat-app
+    restart: always
+    environment:
+      - NEXT_PUBLIC_DB_LOCAL_URL=mongodb://mongo:27017/chatDB
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: chatDB
+   
+
+
+  
+ 
