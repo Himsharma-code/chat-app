@@ -1,4 +1,5 @@
 "use client";
+import Auth from "@/pages/Auth";
 import { isLoggedIn } from "@/utils/isLoggedIn";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -13,8 +14,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex gap-2 min-h-screen flex-col  p-12">
-      <div>Hello</div>
+    <main className="p-6">
+      <Auth />
     </main>
   );
 }
