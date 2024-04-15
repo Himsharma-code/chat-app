@@ -1,6 +1,6 @@
 import { getToken } from "./isLoggedIn";
 
-const request = async (
+const call = async (
   url: string,
   method: "GET" | "POST" | "UPDATE" | "DELETE",
   data?: any
@@ -35,4 +35,4 @@ const request = async (
   }
 };
 
-export { request };
+export { call };

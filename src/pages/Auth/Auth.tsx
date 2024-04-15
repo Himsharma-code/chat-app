@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
 
@@ -11,6 +11,9 @@ function Auth() {
   return (
     <div className="flex justify-center w-full text-center">
       <Card className="w-full max-w-[500px]">
+        <CardBody className=" text-center">
+          <h1 className=" font-bold  uppercase">Chats Sphere</h1>
+        </CardBody>
         <CardBody>
           <Tabs
             fullWidth
